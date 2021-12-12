@@ -24,6 +24,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        env:
+          DJANGO_SECRET: django-insecure-fsagoj%o#_5gl%iem(w55%311c=$$+(7vj+09f2+cvs)6=-*7eu
       - name: Set up Python 3.9
         uses: actions/setup-python@v2
         with:
