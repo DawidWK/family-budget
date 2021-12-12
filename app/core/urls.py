@@ -2,6 +2,9 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from core import views
 
+
+app_name = "core"
+
 router = DefaultRouter()
 router.register("category", views.CategoryViewSet)
 router.register("budget", views.BudgetViewSet)
