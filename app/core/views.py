@@ -67,7 +67,7 @@ class BudgetViewSet(BaseModelViewSet):
     serializer_class = BudgetSerializer
 
     def get_queryset(self):
-        """Returns only queryset which authenticated user is author
+        """Returns only queryset where authenticated user is author
         or is in shared_with field"""
         assigned_only = bool(
             int(self.request.query_params.get("assigned_only", 0))
