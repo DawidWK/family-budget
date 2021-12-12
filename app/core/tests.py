@@ -28,3 +28,23 @@ class TestModels(TestCase):
 
         budget = models.Budget.objects.create(**data)
         self.assertEqual(str(budget), data["name"])
+
+
+class TestPublicAPI(TestCase):
+    def test_creating_user(self):
+        pass
+
+    def test_creating_user_with_password_that_has_less_than_8_characters(self):
+        pass
+
+    def test_auth_token(self):
+        pass
+
+    def test_auth_token_with_wrong_password(self):
+        pass
+
+    def test_me_page(self):
+        pass
+
+    def test_me_page_with_wrong_password(self):
+        pass
