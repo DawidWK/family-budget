@@ -1,6 +1,15 @@
-from rest_framework import generics, authentication, permissions
+from rest_framework import (
+    generics,
+    authentication,
+    mixins,
+    permissions,
+    viewsets,
+)
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.settings import api_settings
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
+from django.db.models import Q
 from core.serializers import (
     UserSerializer,
     AuthTokenSerializer,
@@ -8,11 +17,6 @@ from core.serializers import (
     BudgetSerializer,
 )
 from core import models
-from rest_framework.authentication import TokenAuthentication
-from rest_framework.permissions import IsAuthenticated
-from rest_framework import generics
-from rest_framework import viewsets, mixins, status
-from django.db.models import Q
 
 
 class CreateUserView(generics.CreateAPIView):
